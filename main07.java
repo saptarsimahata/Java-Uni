@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class main07 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.println("Enter a string:");
+        String input = sc.nextLine();
+
+        
+        StringBuilder result = new StringBuilder();
+
+        
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+
+            if (Character.isLowerCase(ch)) {
+              
+                result.append(Character.toUpperCase(ch));
+            } else if (Character.isUpperCase(ch)) {
+                
+                result.append(Character.toLowerCase(ch));
+            } else {
+                
+                result.append(ch);
+            }
+        }
+
+        
+        System.out.println("\n--- Result ---");
+        System.out.println("Original: " + input);
+        System.out.println("Swapped : " + result.toString());
+
+        sc.close();
+    }
+}
